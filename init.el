@@ -1,7 +1,13 @@
 ; Add melpa package-archive
 (require 'package)
 (add-to-list 'package-archives
-             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+             '("melpa" . "https://melpa.org/packages/") t)
+
+(setq package-archive-priorities
+      '(("gnu" . 20)
+        ("non-gnu" . 10)
+        ("melpa" . 0)))
+
 (package-initialize)
 
 ; Set JetBrainsMono as the default font
@@ -27,17 +33,19 @@
 (use-package evil
   :ensure t
   :init
+  (setq evil-want-integration t)
+  (setq evil-want-keybinding nil)
   (setq evil-want-C-u-scroll t)
   :custom
-  (evil-want-keybinding nil)
   (evil-undo-system 'undo-redo)
   :config
   (evil-mode 1))
 
 (use-package evil-collection
+  :after evil
   :ensure t
   :config
- (evil-collection-init))
+  (evil-collection-init))
  
 (use-package vertico
   :ensure t
