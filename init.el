@@ -101,6 +101,8 @@
   (add-to-list 'eglot-server-programs
                '(lua-ts-mode .  ("lua-language-server"))))
 
+(add-hook 'org-mode-hook #'org-indent-mode)
+
 (use-package lua-ts-mode
   :mode "\\.lua\\'"
   :hook (lua-ts-mode . eglot-ensure))
