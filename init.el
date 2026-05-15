@@ -15,15 +15,14 @@
 (tool-bar-mode -1)
 
 (global-display-line-numbers-mode 1)
-(global-hl-line-mode 1)
 
 (setq display-line-numbers-type 'relative)
 (setq inhibit-startup-screen t)
 (setq org-log-done 'time)
 (setq vc-follow-symlinks t)
 
-(load-theme 'modus-operandi :no-confirm)
-;; (load-theme 'modus-vivendi :no-confirm)
+;; (load-theme 'modus-operandi :no-confirm)
+(load-theme 'modus-vivendi :no-confirm)
 
 ;; Vim emulation
 (use-package evil
