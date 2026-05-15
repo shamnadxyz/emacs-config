@@ -96,7 +96,13 @@
 
 (with-eval-after-load 'eglot
   (add-to-list 'eglot-server-programs
-               '(markdown-mode . ("markdown-oxide"))))
+               '(markdown-mode . ("markdown-oxide")))
+  (add-to-list 'eglot-server-programs
+               '(lua-ts-mode .  ("lua-language-server"))))
+
+(use-package lua-ts-mode
+  :mode "\\.lua\\'"
+  :hook (lua-ts-mode . eglot-ensure))
 
 (use-package markdown-mode
   :ensure t
