@@ -122,6 +122,7 @@
 (use-package ef-themes
   :ensure t
   :config
+  (set-frame-parameter nil 'alpha-background 90)
   (load-theme 'ef-owl :no-confirm))
 
 (custom-set-variables
