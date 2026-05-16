@@ -22,8 +22,6 @@
 (setq org-log-done 'time)
 (setq vc-follow-symlinks t)
 
-;; (load-theme 'modus-operandi :no-confirm)
-(load-theme 'modus-vivendi :no-confirm)
 
 ;; Vim emulation
 (use-package evil
@@ -117,6 +115,14 @@
 
 (use-package magit
   :ensure t)
+
+(use-package consult
+  :ensure t)
+
+(use-package ef-themes
+  :ensure t
+  :config
+  (load-theme 'ef-owl :no-confirm))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
