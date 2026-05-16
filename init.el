@@ -76,6 +76,10 @@
   :ensure t
   :hook (after-init . global-company-mode)
   :config
+  (define-key company-active-map (kbd "<return>")
+    nil)
+  (define-key company-active-map (kbd "RET")
+    nil)
   ;; trigger completion
   (define-key evil-insert-state-map (kbd "C-SPC")
     #'company-complete)
