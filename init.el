@@ -7,7 +7,7 @@
 
 ; Set Iosevka as the default font
 (add-to-list 'default-frame-alist
-             '(font . "Iosevka NF-16"))
+             '(font . "IosevkaTerm NF-16"))
 
 ;; Remove GUI components
 (menu-bar-mode -1)
